@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+message Product {
+  double id = 1;
+  string thumbnail = 2;
+  string preco = 3;
+  string ingredientes = 4;
+  string disponibilidade = 5;
+  string volume = 6;
+}
+
+message ByIdRequest {
+  double id = 1;
+}
+
+message Empty {}
+
+message ListProductsResponse {
+  repeated Product products = 1;
+}
+
+service ProductService {
+  rpc RegisterProduct(Product) returns (Product);
+  rpc ListProducts(Empty) returns (ListProductsResponse);
+  rpc GetProductById(ByIdRequest) returns (Product);
+  rpc CloneProductById(ByIdRequest) returns (Product);
+  rpc UpateProductById(Product) returns (Product);
+  rpc DeleteProductById(ByIdRequest) returns (Empty);
+}

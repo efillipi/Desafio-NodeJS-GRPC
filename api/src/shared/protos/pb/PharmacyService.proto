@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+message Pharmacy {
+  double id = 1;
+  double idSede = 2;
+  string logo = 3;
+  string nome = 4;
+  string cnpj = 5;
+  string endereco = 6;
+  string horarioFuncionamento = 7;
+  string responsavel = 8;
+  string telefone = 9;
+  Pharmacy sede = 10;
+  repeated Pharmacy filiais = 11;
+}
+
+message ByIdPharmacyRequest {
+  double id = 1;
+}
+
+message PharmacyEmpty {}
+
+message ListPharmaciesResponse {
+  repeated Pharmacy pharmacies = 1;
+}
+
+service PharmacyService {
+  rpc RegisterPharmacy(Pharmacy) returns (Pharmacy);
+  rpc ListPharmacies(PharmacyEmpty) returns (ListPharmaciesResponse);
+  rpc GetPharmacyById(ByIdPharmacyRequest) returns (Pharmacy);
+  rpc UpatePharmacyById(Pharmacy) returns (Pharmacy);
+  rpc DeletePharmacyById(ByIdPharmacyRequest) returns (PharmacyEmpty);
+}

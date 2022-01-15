@@ -1,0 +1,8 @@
+{
+  "name": "Desafio-NodeJS-GRPC",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/efillipi/Desafio-NodeJS-GRPC.git",
+  "author": "Edney Fillipi <e.fillipi@gmail.com>",
+  "license": "MIT"
+}
