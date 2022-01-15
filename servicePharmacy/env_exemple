@@ -1,11 +1,11 @@
 # Application
-SERVICE_URL_PORT=
+SERVICE_URL_PORT=localhost:3002
 
 # Banco de dados Local
-DB_NAME=
-DB_CLIENT=
-DB_PORT=
-DB_HOST=
-DB_USER=
-DB_PASSWORD=
-DB_DATABASE=
+DB_NAME=default
+DB_CLIENT=mariadb
+DB_PORT=3003
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=efillipi
+DB_DATABASE=desafio_GRPC
