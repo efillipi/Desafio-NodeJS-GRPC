@@ -1,0 +1,360 @@
+_type: export
+__export_format: 4
+__export_date: 2022-01-15T00:49:59.703Z
+__export_source: insomnia.desktop.app:v2021.7.2
+resources:
+  - _id: req_4374c02c67cc47d9bcfd585e21c7be75
+    parentId: fld_5be74c310e9c445d8d83cb07c5ba530d
+    modified: 1642207422990
+    created: 1641873986391
+    url: "{{ _.base_url }}products"
+    name: Create produto
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"thumbnail":"{% now 'unix', '' %}",
+        	"preco":"{% now 'millis', '' %}",
+        	"ingredientes":"{% now 'iso-8601', '' %}",
+        	"disponibilidade":"{% uuid 'v4' %}",
+        	"volume":"{% hash 'md5', 'hex', '' %}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_14109eb96ca3444db7e4e47f634957e2
+    authentication: {}
+    metaSortKey: -1641873986391
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5be74c310e9c445d8d83cb07c5ba530d
+    parentId: wrk_f7e5c5989a8448948748f2201e681613
+    modified: 1641916503862
+    created: 1641873977426
+    name: Produtos
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1641873977426
+    _type: request_group
+  - _id: wrk_f7e5c5989a8448948748f2201e681613
+    parentId: null
+    modified: 1641873966665
+    created: 1641873966665
+    name: Desafio-NodeJS-GRPC
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_05815e2c80304efc818f301b3b85add9
+    parentId: fld_5be74c310e9c445d8d83cb07c5ba530d
+    modified: 1642207327447
+    created: 1641917213550
+    url: "{{ _.base_url }}products/4"
+    name: Clone produto
+    description: ""
+    method: POST
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1639987951804.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2200939005b04f10b6898f14d326a0b3
+    parentId: fld_5be74c310e9c445d8d83cb07c5ba530d
+    modified: 1642019467114
+    created: 1641916468312
+    url: "{{ _.base_url }}products"
+    name: List produtos
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1638101917217.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6ae847f60d6944f3a26846094a6c8dcc
+    parentId: fld_5be74c310e9c445d8d83cb07c5ba530d
+    modified: 1642162135619
+    created: 1641916472988
+    url: "{{ _.base_url }}products/1"
+    name: By id produto
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1636215882630.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_79ab9c8112654eb5a4f4da34707c7009
+    parentId: fld_5be74c310e9c445d8d83cb07c5ba530d
+    modified: 1642207359570
+    created: 1641916475104
+    url: "{{ _.base_url }}products/1"
+    name: Update produto
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"thumbnail":"{% now 'unix', '' %}",
+        	"preco":"{% now 'unix', '' %}",
+        	"ingredientes":"{% now 'unix', '' %}",
+        	"disponibilidade":"{% now 'unix', '' %}",
+        	"volume":"{% now 'unix', '' %}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_933c3d0b528145e4abf11b86473cd91d
+    authentication: {}
+    metaSortKey: -1635272865337.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_96d5811138b143b1a7b212279b3b5216
+    parentId: fld_5be74c310e9c445d8d83cb07c5ba530d
+    modified: 1642207354957
+    created: 1641916478088
+    url: "{{ _.base_url }}products/1"
+    name: Delete produto
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1634801356690.6875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5bcf7701d93c4318a0fa66df56c7f30d
+    parentId: fld_7752c4cf4f6c462197e0a06904f7ce67
+    modified: 1642207526615
+    created: 1642154240841
+    url: "{{ _.base_url }}pharmacies"
+    name: Create Farmacia
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        "idSede":"6",
+        "logo":"{% now 'unix', '' %}",
+        "nome":"{% now 'unix', '' %}",
+        "cnpj":"{% now 'unix', '' %}",
+        "endereco":"{% now 'unix', '' %}",
+        "horarioFuncionamento":"{% now 'unix', '' %}",
+        "responsavel":"{% now 'unix', '' %}",
+        "telefone":"{% now 'unix', '' %}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_14109eb96ca3444db7e4e47f634957e2
+    authentication: {}
+    metaSortKey: -1641873986391
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_7752c4cf4f6c462197e0a06904f7ce67
+    parentId: wrk_f7e5c5989a8448948748f2201e681613
+    modified: 1642154240830
+    created: 1642154240830
+    name: Pharmacy
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1640512909327.5
+    _type: request_group
+  - _id: req_80a057f021344b329ac376738cd3be0f
+    parentId: fld_7752c4cf4f6c462197e0a06904f7ce67
+    modified: 1642154281346
+    created: 1642154240856
+    url: "{{ _.base_url }}pharmacies"
+    name: List Farmacias
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1638101917217.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8dd7225df31c43f6af87450b0c9ca12d
+    parentId: fld_7752c4cf4f6c462197e0a06904f7ce67
+    modified: 1642207702119
+    created: 1642154240867
+    url: "{{ _.base_url }}pharmacies/11"
+    name: By id Farmacia
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1636215882630.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9f2b173adc5349fba3ef1b6402385548
+    parentId: fld_7752c4cf4f6c462197e0a06904f7ce67
+    modified: 1642207747959
+    created: 1642154240919
+    url: "{{ _.base_url }}pharmacies/11"
+    name: Update Farmacia
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        "logo":"{% now 'unix', '' %}",
+        "nome":"{% now 'unix', '' %}",
+        "cnpj":"{% now 'unix', '' %}",
+        "endereco":"{% now 'unix', '' %}",
+        "horarioFuncionamento":"{% now 'unix', '' %}",
+        "responsavel":"{% now 'unix', '' %}",
+        "telefone":"{% now 'unix', '' %}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_933c3d0b528145e4abf11b86473cd91d
+    authentication: {}
+    metaSortKey: -1635272865337.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a6299eace0904df1b6f4d1443a5aaaec
+    parentId: fld_7752c4cf4f6c462197e0a06904f7ce67
+    modified: 1642207733709
+    created: 1642154240973
+    url: "{{ _.base_url }}pharmacies/11"
+    name: Delete Farmacia
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1634801356690.6875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_2580856473dd306b5bdf9ba7fd274b2ee3aba03b
+    parentId: wrk_f7e5c5989a8448948748f2201e681613
+    modified: 1641874007422
+    created: 1641873966681
+    name: Base Environment
+    data:
+      base_url: http://localhost:3333/
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: null
+    isPrivate: false
+    metaSortKey: 1641873966681
+    _type: environment
+  - _id: jar_2580856473dd306b5bdf9ba7fd274b2ee3aba03b
+    parentId: wrk_f7e5c5989a8448948748f2201e681613
+    modified: 1641873966693
+    created: 1641873966693
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_cb54e6ce46934359a7155321ac43459f
+    parentId: wrk_f7e5c5989a8448948748f2201e681613
+    modified: 1641873966671
+    created: 1641873966671
+    fileName: Desafio-NodeJS-GRPC
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_a653c8230e6e451cabf7238f18495398
+    parentId: env_2580856473dd306b5bdf9ba7fd274b2ee3aba03b
+    modified: 1642207753891
+    created: 1641874011279
+    name: "3333"
+    data:
+      base_url: http://localhost:3333/
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: null
+    isPrivate: false
+    metaSortKey: 1641874011279
+    _type: environment

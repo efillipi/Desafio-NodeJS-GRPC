@@ -8,4 +8,4 @@ NodeJS com Typescript, Testes com Jest, Docker, Express, MariaDB, GRPC, TYPEORM
 4. Run `yarn dev` on both microservices.<br />
 5. Run `yarn dev` on API.<br />
 6. Enjoy sending requests to REST API available at `http://localhost:3333`.<br />
-   6.1. You can import `Insomnia file` inside `api` folder.<br />
+   6.1. You can import `Insomnia file` - `Desafio-NodeJS-GRPC.yaml`.<br />
