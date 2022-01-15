@@ -1,12 +1,12 @@
 # Desafio-NodeJS-GRPC
 
-[x] NodeJS com Typescript, 
-[x] Testes com Jest, 
-[x] Docker, 
-[x] Express, 
-[x] MariaDB, 
-[x] GRPC, 
-[x] TYPEORM
+- [x] NodeJS com Typescript, 
+- [x] Testes com Jest, 
+- [x] Docker, 
+- [x] Express, 
+- [x] MariaDB, 
+- [x] GRPC, 
+- [x] TYPEORM
 
 ## Getting started
 
