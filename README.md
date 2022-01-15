@@ -17,7 +17,7 @@
 5. Run `yarn dev:server` on both microservices.<br />
 6. Run `yarn dev:server` on API.<br />
 7. Enjoy sending requests to REST API available at `http://localhost:3333`.<br />
-   6.1. You can import `Insomnia file` - `Desafio-NodeJS-GRPC.yaml`.<br />
+   7.1. You can import `Insomnia file` - `Desafio-NodeJS-GRPC.yaml`.<br />
 
 
 ## Test with Jest
